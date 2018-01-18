@@ -1,24 +1,31 @@
 
 # Pelerea
+
 ## :white_check_mark: Regular expressions for Persian aka Farsi language 🇮🇷
 
-#### Regular expressions for validating, saniztizing and filtering strings when it must be Persian.
+#### Regular expressions for validating, sanizing and filtering strings when it must be Persian.
 
 #### :eight_pointed_black_star: Notes
 
-* because of historical matters, many arabic characters get a way into persian language and transformed it,
-but in these years many efforts made by goverment and non-goverment organizations to make a personality for Persian language.
-* Persian alphabet consists of 32 characters but for above reasons there are five more arabic characters that used in many old text so they are supported in the regex
+* because of historical matters, many Arabic characters get a way into Persian language and transformed it,
+but in these years many efforts made by government and non-government organizations to make a personality for Persian language.
+
+* Persian alphabet consists of 32 characters but for above reasons there are five more Arabic characters that used in many old text so they are supported in the regex
+
 * The important part of this effort, is codepoints range, so you can create your own regex in any way you want just put the desired codepoints range in it
+
 * All patterns only pass one word means characters with no space if you want to run patterns against more than one word
 just concat space pattern to desired patterns
 
 
 ### :black_square_button: Codepoints range
 
+
 ### :white_square_button: Space
 
-includes all kind of space specially zero-width space that massively use in persian
+
+includes all kind of space specially zero-width space that massively use in Persian
+
 
 ```
 U+0020
@@ -26,7 +33,9 @@ U+2000-U+200F
 U+2028-U+202F
 ```
 
+
 #### :small_orange_diamond: Allowed characters
+
 
 code point | character | hex    | name
 -----------|-----------|--------|---------------------
@@ -56,7 +65,9 @@ U+202D	‭   |	       |e2 80 ad| LEFT-TO-RIGHT OVERRIDE
 U+202E	‮   |	       |e2 80 ae| RIGHT-TO-LEFT OVERRIDE
 U+202F	   |           |e2 80 af| NARROW NO-BREAK SPACE
 
+
 #### :small_orange_diamond: How use it
+
 
 ```python
 input = ' '
@@ -66,6 +77,7 @@ if result:
 	...
 ```
 
+
 ```php
 $onput = ' ';
 $space_codepoints = '\x{0020}\x{2000}-\x{200F}\x{2028}-\x{202F}';
@@ -74,8 +86,9 @@ if($result)
 	...
 ```
 
-
+---
 ### :white_square_button: Persian alphabet (37 characters)
+
 
 ```
 U+0621-U+0623
@@ -89,7 +102,9 @@ U+06BE
 U+06CC
 ```
 
+
 #### :small_orange_diamond: Allowed characters
+
 
 code point | character | hex   | name
 -----------|-----------|-------|---------------------
@@ -130,7 +145,9 @@ U+06AF	   | گ	       | da af | ARABIC LETTER GAF
 U+06BE	   | ھ	       | da be | ARABIC LETTER HEH DOACHASHMEE
 U+06CC	   | ی	       | db 8c | ARABIC LETTER FARSI YEH
 
+
 #### :small_orange_diamond: How use it
+
 
 ```python
 input = 'این یک تست است'
@@ -142,6 +159,7 @@ if result:
 	...
 ```
 
+
 ```php
 $input = 'این یک تست است';
 $persian_alpha_codepoints = '\x{0621}-\x{0623}\x{0627}-\x{063A}
@@ -152,12 +170,14 @@ if($result)
 	...
 ```
 
-
+---
 ### :white_square_button: Persian numbers
+
 
 ```
 U+06F0-U+06F9
 ```
+
 
 code point | character | hex   | name
 -----------|-----------|-------|---------------------
@@ -172,7 +192,9 @@ U+06F7	   | ۷	       | db b7 | EXTENDED ARABIC-INDIC DIGIT SEVEN
 U+06F8	   | ۸	       | db b8 | EXTENDED ARABIC-INDIC DIGIT EIGHT
 U+06F9	   | ۹	       | db b9 | EXTENDED ARABIC-INDIC DIGIT NINE
 
+
 #### :small_orange_diamond: How use it
+
 
 ```python
 input = '۲۱۳'
@@ -182,6 +204,7 @@ if result:
 	...
 ```
 
+
 ```php
 $input = '۲۱۳';
 $persian_num_codepoints = '[\x{06F0}-\x{06F9}]';
@@ -190,8 +213,9 @@ if($result)
 	...
 ```
 
-
+---
 ### :white_square_button: Persian(Arabic) punctuation marks
+
 
 ```
 U+060C
@@ -203,6 +227,7 @@ U+066B
 U+066C
 ```
 
+
 code point | character | hex   | name
 -----------|-----------|-------|---------------------
 U+060C	   | ،	       | d8 8c | ARABIC COMMA
@@ -213,7 +238,11 @@ U+066A	   | ٪	       | d9 aa | ARABIC PERCENT SIGN
 U+066B	   | ٫	       | d9 ab | ARABIC DECIMAL SEPARATOR
 U+066C	   | ٬	       | d9 ac | ARABIC THOUSANDS SEPARATOR
 
+
+
 #### :eight_pointed_black_star: for more common punctutation marks like `” | « | » | ?| ; | : | ...` <br> see [general punctuation page in unicode](https://en.wikipedia.org/wiki/List_of_Unicode_characters#General_Punctuation)
+
+
 
 ```python
 test = 'این یک نوشته تست است؟'
@@ -223,6 +252,7 @@ if result:
 	...
 ```
 
+
 ```php
 $punctuation_marks_codepoints = '\x{060C}\x{061B}\x{061F}\x{0640}\x{066A}\x{066B}\x{066C}';
 $result = preg_match('/^['.$space_codepoint.+$punctuation_marks_codepoints.$punctuation_marks_codepoints.'+$/u', $input)
@@ -230,8 +260,12 @@ if($result)
 	...
 ```
 
+---
+### :white_square_button: Additional Arabic characters and vowels marks
 
-### :white_square_button: Additional Arabic characters and vowels marks that used in old persian text
+
+:eight_pointed_black_star: these characters used in old Persian text
+
 
 ```
 U+0624-U+0626
@@ -239,6 +273,7 @@ U+0643
 U+0649-U+0655
 U+06D5
 ```
+
 
 code point | character | hex   | name
 -----------|-----------|-------|---------------------
@@ -261,7 +296,9 @@ U+0654	   | ٔ	       | d9 94 | ARABIC HAMZA ABOVE
 U+0655	   | ٕ	       | d9 95 |ARABIC HAMZA BELOW
 U+06D5	   | ە	       | db 95 | ARABIC LETTER AE
 
+
 #### :small_orange_diamond: How use it
+
 
 ```python
 input = 'ؤ'
@@ -271,6 +308,7 @@ if result:
 	...
 ```
 
+
 ```php
 $input = 'ؤ';
 $additional_arabic_characters_and_vowels_marks_codepoint ='\x{0624}-\x{0626}x{0643}\x{0649}-\x{0655}\x{06D5}';
@@ -279,12 +317,14 @@ if($result)
 	...
 ```
 
-
+---
 ### :white_square_button: Arabic numbers
+
 
 ```
 U+0660-U+0669
 ```
+
 
 code point | character | hex   | name
 -----------|-----------|-------|---------------------
@@ -299,7 +339,9 @@ U+0667	   | ٧	       | d9 a7 | ARABIC-INDIC DIGIT SEVEN
 U+0668	   | ٨	       | d9 a8 | ARABIC-INDIC DIGIT EIGHT
 U+0669	   | ٩	       | d9 a9 | ARABIC-INDIC DIGIT NINE
 
+
 #### :large_orange_diamond: How use it
+
 
 ```python
 input='١٥٤٦'
@@ -308,6 +350,7 @@ result=re.search('^['+arabic_numbers_codepoints+']+$', input)
 if result:
 	...
 ```
+
 
 ```php
 $input='١٥٤٦'; 
