@@ -354,6 +354,7 @@ additional_arabic_characters_codepoints = '\u0624-\u0625\u0643\u0649-\u064A\u06D
 
 
 ```php
+// php
 $additional_arabic_characters_codepoints ='\x{0624}-\x{0625}\x{0643}\x{0649}-\x{064A}\x{06D5}';
 ```
 
@@ -411,6 +412,7 @@ $arabic_numbers_codepoints ='\x{0660}-\x{0669}';
 
 
 ```javascript
+// javascript
 var arabic_numbers_codepoints = '\u0660-\u0669';
 ```
 
