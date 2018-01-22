@@ -395,13 +395,12 @@ U+0668	   | ٨	       | d9 a8 | ARABIC-INDIC DIGIT EIGHT
 U+0669	   | ٩	       | d9 a9 | ARABIC-INDIC DIGIT NINE
 
 
-#### :small_orange_diamond: How use it
+#### :small_orange_diamond: Implemention
 
 
 ```python
 # python
 arabic_numbers_codepoints = '\u0660-\u0669'
-	...
 ```
 
 
