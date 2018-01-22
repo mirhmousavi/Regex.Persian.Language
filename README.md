@@ -1,14 +1,16 @@
 
-# :white_check_mark: 🇮🇷 🇮🇷 🇮🇷 Regex for Persian (Farsi) Language 🇮🇷 🇮🇷 🇮🇷
+# 🇮🇷 🇮🇷 🇮🇷 Regex for Persian (Farsi) Language 🇮🇷 🇮🇷 🇮🇷
 
 
-#### Collection of Regex for validating, filtering, sanitizing and finding Persian strings.
+## Collection of Regex for validating, filtering, sanitizing and finding Persian strings
+
 
 
 ### Introduction
 
 
 Because of historical matters, many Arabic characters get a way into Persian language and transformed it, In these years many efforts have been made by government and non-governmental organizations to revivification of authority of Persian language and this is one of them.
+
 
 
 #### :eight_pointed_black_star: Notes
@@ -23,12 +25,18 @@ for example when string should only contains persian words and spaces just conca
 
 * Characters in table are sorted by codepoints
 
+
+* Don't put Regex in multiline because space will be included.
+
+
 * See tests after reading.
+
+
 
 ---
 
 
-### :black_square_button: Codepoints Range
+## :black_square_button: Codepoints Range
 
 
 ### :white_square_button: Space
@@ -391,7 +399,7 @@ U+0669	   | ٩	       | d9 a9 | ARABIC-INDIC DIGIT NINE
 
 
 ```python
-// python
+# python
 arabic_numbers_codepoints = '\u0660-\u0669'
 	...
 ```
