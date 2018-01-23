@@ -3,7 +3,11 @@
 ### Regex for Persian (Farsi) Characters
 ### عبارت منظم برای حروف فارسی
 
-## Collection of Regex for validating, filtering, sanitizing and finding Persian strings
+
+---
+
+
+### Collection of Regex for validating, filtering, sanitizing and finding Persian strings
 
 
 
