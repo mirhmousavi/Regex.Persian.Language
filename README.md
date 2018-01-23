@@ -1,6 +1,7 @@
 
-# 🇮🇷 🇮🇷 🇮🇷 Regex for Persian (Farsi) Characters 🇮🇷 🇮🇷 🇮🇷
-# 🇮🇷 🇮🇷 🇮🇷 عبارت منظم برای حروف فارسی 🇮🇷 🇮🇷 🇮🇷
+# 🇮🇷 🇮🇷 🇮🇷 Regex Persian Language 🇮🇷 🇮🇷 🇮🇷
+### Regex for Persian (Farsi) Characters
+### عبارت منظم برای حروف فارسی
 
 ## Collection of Regex for validating, filtering, sanitizing and finding Persian strings
 
