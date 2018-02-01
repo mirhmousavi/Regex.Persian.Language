@@ -21,7 +21,7 @@ Because of historical matters, many Arabic characters get a way into Persian lan
 #### :eight_pointed_black_star: Notes
 
 
-* Persian alphabet consists of 32 characters and 3 vowel marks, but for above reasons there are 6 more Arabic characters and 8 more vowel marks that are being used in many texts.
+* Persian alphabet consists of 33 characters (including hamzah) and 3 vowel marks.
 
 
 * The important part of this effort, is codepoints range, so you can create your own regex for validating, filtering and finding strings, just put the desired range in it.< br>
@@ -79,7 +79,7 @@ U+200F	‏   |           |e2 80 8f| RIGHT-TO-LEFT MARK
 U+2028     |	       |e2 80 a8| LINE SEPARATOR
 U+2029	   |	       |e2 80 a9| PARAGRAPH SEPARATOR
 U+202A	‪   |	       |e2 80 aa| LEFT-TO-RIGHT EMBEDDING
-U+202B	‫   |	       |e2 80 ab| RIGHT-TO-LEFT EMBEDDING
+U+202B	   ‫|           |	         e2 80 ab| RIGHT-TO-LEFT EMBEDDING
 U+202C	‬   | 	       |e2 80 ac| POP DIRECTIONAL FORMATTING
 U+202D	‭   |	       |e2 80 ad| LEFT-TO-RIGHT OVERRIDE
 U+202E	‮   |	       |e2 80 ae| RIGHT-TO-LEFT OVERRIDE
@@ -116,15 +116,15 @@ var space_codepoints ='\u0020\u2000-\u200F\u2028-\u202F';
 #### :small_orange_diamond: Allowed characters
 
 
-ءآأئابةتثجحخدذرزسشصضطظعغفقلمنهوًٌٍَُِّْٕٓٔپچژکگھی
 
 
 ```
-U+0621-U+0623
-U+0626-U+063A
+U+0621-U+0628
+U+062A-U+063A
 U+0641-U+0642
 U+0644-U+0648
-U+064B-U+0655
+U+064E-U+0651
+U+0655
 U+067E
 U+0686
 U+0698
@@ -133,16 +133,16 @@ U+06BE
 U+06CC
 ```
 
-
 code point | character | hex   | name
 -----------|-----------|-------|---------------------
-U+0621    | ء        | d8 a1 | ARABIC LETTER HAMZA
-U+0622    | آ	       | d8 a2 | ARABIC LETTER ALEF WITH MADDA ABOVE
+U+0621     | ء         | d8 a1 | ARABIC LETTER HAMZA
+U+0622     | آ	       | d8 a2 | ARABIC LETTER ALEF WITH MADDA ABOVE
 U+0623	   | أ	       | d8 a3 | ARABIC LETTER ALEF WITH HAMZA ABOVE
+U+0624	   | ؤ	       | d8 a4 | ARABIC LETTER WAW WITH HAMZA ABOVE
+U+0625	   | إ	       | d8 a5 | ARABIC LETTER ALEF WITH HAMZA BELOW
 U+0626	   | ئ	       | d8 a6 | ARABIC LETTER YEH WITH HAMZA ABOVE
 U+0627	   | ا	       | d8 a7 | ARABIC LETTER ALEF
 U+0628	   | ب	       | d8 a8 | ARABIC LETTER BEH
-U+0629	   | ة	       | d8 a9 | ARABIC LETTER TEH MARBUTA
 U+062A	   | ت	       | d8 aa | ARABIC LETTER TEH
 U+062B	   | ث	       | d8 ab | ARABIC LETTER THEH
 U+062C	   | ج	       | d8 ac | ARABIC LETTER JEEM
@@ -157,7 +157,7 @@ U+0634	   | ش	       | d8 b4 | ARABIC LETTER SHEEN
 U+0635	   | ص	       | d8 b5 | ARABIC LETTER SAD
 U+0636	   | ض	       | d8 b6 | ARABIC LETTER DAD
 U+0637	   | ط	       | d8 b7 | ARABIC LETTER TAH
-U+0638	   | ظ        | d8 b8 | ARABIC LETTER ZAH
+U+0638	   | ظ         | d8 b8 | ARABIC LETTER ZAH
 U+0639	   | ع	       | d8 b9 | ARABIC LETTER AIN
 U+063A	   | غ	       | d8 ba | ARABIC LETTER GHAIN
 U+0641	   | ف	       | d9 81 | ARABIC LETTER FEH
@@ -167,16 +167,10 @@ U+0645	   | م	       | d9 85 | ARABIC LETTER MEEM
 U+0646	   | ن	       | d9 86 | ARABIC LETTER NOON
 U+0647	   | ه	       | d9 87 | ARABIC LETTER HEH
 U+0648	   | و	       | d9 88 | ARABIC LETTER WAW
-U+064B	   | ً	       | d9 8b | ARABIC FATHATAN
-U+064C	   | ٌ	       | d9 8c | ARABIC DAMMATAN
-U+064D	   | ٍ	       | d9 8d | ARABIC KASRATAN
 U+064E	   | َ	       | d9 8e | ARABIC FATHA
 U+064F	   | ُ	       | d9 8f | ARABIC DAMMA
-U+0650	   | ِ     	| d9 90 | ARABIC KASRA
+U+0650     |ِ           |d9 90  |ARABIC KASRA
 U+0651	   | ّ	       | d9 91 | ARABIC SHADDA
-U+0652	   | ْ	       | d9 92 | ARABIC SUKUN
-U+0653	   | ٓ     	| d9 93 | ARABIC MADDAH ABOVE
-U+0654	   | ٔ	       | d9 94 | ARABIC HAMZA ABOVE
 U+0655	   | ٕ	       | d9 95 |ARABIC HAMZA BELOW
 U+067E	   | پ	       | d9 be |	ARABIC LETTER PEH
 U+0686	   | چ	       | da 86 | ARABIC LETTER TCHEH
@@ -192,19 +186,19 @@ U+06CC	   | ی	       | db 8c | ARABIC LETTER FARSI YEH
 
 ```python
 # python
-persian_alpha_codepoints = '\u0621-\u0623\u0626-\u063A\u0641-\u0642\u0644-\u0648\u064B-\u0655\u067E\u0686\u0698\u06A9-\u06AF\u06BE\u06CC'
+persian_alpha_codepoints = '\u0621-\u0628\u062A-\u063A\u0641-\u0642\u0644-\u0648\u064E-\u0651\u0655\u067E\u0686\u0698\u06A9\u06AF\u06BE\u06CC'
 ```
 
 
 ```php
 // php
-$persian_alpha_codepoints = '\x{0621}-\x{0623}\x{0626}-\x{063A}\x{0641}-\x{0642}\x{0644}-\x{0648}\x{064B}-\x{0655}\x{067E}\x{0686}\x{0698}\x{06A9}-\x{06AF}\x{06BE}\x{06CC}';
+$persian_alpha_codepoints = '\x{0621}-\x{0628}\x{062A}-\x{063A}\x{0641}-\x{0642}\x{0644}-\x{0648}\x{064E}-\x{0651}\x{0655}\x{067E}\x{0686}\x{0698}\x{06A9}\x{06AF}\x{06BE}\x{06CC}';
 ```
 
 
 ```javascript
 // javascript
-var persian_alpha_codepoints = '\u0621-\u0623\u0626-\u063A\u0641-\u0642\u0644-\u0648\u064B-\u0655\u067E\u0686\u0698\u06A9-\u06AF\u06BE\u06CC';
+var persian_alpha_codepoints = '\u0621-\u0628\u062A-\u063A\u0641-\u0642\u0644-\u0648\u064E-\u0651\u0655\u067E\u0686\u0698\u06A9\u06AF\u06BE\u06CC';
 ```
 
 
@@ -216,8 +210,6 @@ var persian_alpha_codepoints = '\u0621-\u0623\u0626-\u063A\u0641-\u0642\u0644-\u
 
 #### :small_orange_diamond: Allowed characters
 
-
-۰۱۲۳۴۵۶۷۸۹
 
 
 ```
@@ -269,8 +261,6 @@ var persian_num_codepoints = '\u06F0-\u06F9';
 #### :small_orange_diamond: Allowed characters
 
 
-،؛؟ـ٪٫٬
-
 
 ```
 U+060C
@@ -318,55 +308,59 @@ var punctuation_marks_codepoints = '\u060C\u061B\u061F\u0640\u066A\u066B\u066C';
 ---
 
 
-### :white_square_button: Additional Arabic characters
+### :white_square_button: Most used Arabic characters in Persian text
 
-
-:eight_pointed_black_star: These characters used in old Persian texts.
 
 
 #### :small_orange_diamond: Allowed characters
 
 
-ؤإكىيە
-
 
 ```
-U+0624-U+0625
+U+0629
 U+0643
-U+0649-U+064A
+U+0649-U+064B
+U+064D
 U+06D5
 ```
 
 
+
 code point | character | hex   | name
 -----------|-----------|-------|---------------------
-U+0624	   | ؤ	       | d8 a4 | ARABIC LETTER WAW WITH HAMZA ABOVE
-U+0625	   | إ	       | d8 a5 | ARABIC LETTER ALEF WITH HAMZA BELOW
+U+0629	   | ة	       | d8 a9 | ARABIC LETTER TEH MARBUTA
 U+0643	   | ك	       | d9 83 | ARABIC LETTER KAF
 U+0649	   | ى	       | d9 89 | ARABIC LETTER ALEF MAKSURA
 U+064A	   | ي	       | d9 8a | ARABIC LETTER YEH
+U+064B	   | ً	       | d9 8b | ARABIC FATHATAN
+U+064D	   | ٍ 	       | d9 8d | ARABIC KASRATAN
 U+06D5	   | ە	       | db 95 | ARABIC LETTER AE
 
 
 #### :small_orange_diamond: Implemention
 
+U+0629
+U+0643
+U+0649-U+064B
+U+064D
+U+06D5
 
 ```python
 # python
-additional_arabic_characters_codepoints = '\u0624-\u0625\u0643\u0649-\u064A\u06D5'
+additional_arabic_characters_codepoints = '\u0629\u0643\u0649-\u064B\u064D\u06D5'
 
 ```
 
 
 ```php
 // php
-$additional_arabic_characters_codepoints ='\x{0624}-\x{0625}\x{0643}\x{0649}-\x{064A}\x{06D5}';
+$additional_arabic_characters_codepoints ='\x{0629}\x{0643}\x{0649}-\x{064B}\x{064D}\x{06D5}';
 ```
 
 
 ```javascript
 // javascript
-var additional_arabic_characters_codepoints = '\u0624-\u0625\u0643\u0649-\u064A\u06D5';
+var additional_arabic_characters_codepoints = '\u0629\u0643\u0649-\u064B\u064D\u06D5';
 ```
 
 
@@ -378,8 +372,6 @@ var additional_arabic_characters_codepoints = '\u0624-\u0625\u0643\u0649-\u064A\
 
 #### :small_orange_diamond: Allowed characters
 
-
-٠١٢٣٤٥٦٧٨٩
 
 
 ```

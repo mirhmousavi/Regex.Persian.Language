@@ -7,9 +7,9 @@ assert result
 
 
 
-input='ءآأئابةتثجحخدذرزسشصضطظعغفقلمنهوًٌٍَُِّْٕٓٔچژکگھی'
-persian_alpha_codepoints = '\u0621-\u0623\u0626-\u063A\u0641-\u0642\u0644-\u0648\u064B-\u0655\u067E\u0686\u0698\u06A9-\u06AF\u06BE\u06CC'
-result=re.search('^['+persian_alpha_codepoints+']*$', input)
+input='ءآأؤإئابتثجحخدذرزسشصضطظعغفقلمنهوَُِّٕپچژکگھی'
+persian_alpha_codepoints = '\u0621-\u0628\u062A-\u063A\u0641-\u0642\u0644-\u0648\u064E-\u0651\u0655\u067E\u0686\u0698\u06A9\u06AF\u06BE\u06CC'
+result=re.search('^[\s'+persian_alpha_codepoints+']*$', input)
 assert result
 
 
@@ -28,8 +28,8 @@ assert result
 
 
 
-input='ؤإكىيە'
-additional_arabic_characters_codepoints = '\u0624-\u0625\u0643\u0649-\u064A\u06D5'
+input='ًٍەيىك'
+additional_arabic_characters_codepoints = '\u0629\u0643\u0649-\u064B\u064D\u06D5'
 result=re.search('^['+additional_arabic_characters_codepoints+']*$', input)
 assert result
 
@@ -42,8 +42,8 @@ assert result
 
 
 
-input='این یک نوشته است ض ص ث ق ف غ ع ه خ ح ج چ پ گ ک م ن ت ا ل ب ی س ش ظ ط ز ر ذ د ئ و ةيژؤإأءآًٌٍَُِّ۷۷۷،؛؟';
-result=re.search('^['+persian_alpha_codepoints+additional_arabic_characters_codepoints+
-                     space_codepoints+punctuation_marks_codepoints+
+input='۷۷۷،؛؟   ءآأؤإئابتثجحخدذرزسشصضطظعغفقلمنهوَُِّٕپچژکگھی'
+result=re.search('^[\s,'+persian_alpha_codepoints+additional_arabic_characters_codepoints
+                     +punctuation_marks_codepoints+
                      persian_num_codepoints+']*$', input)
 assert result
