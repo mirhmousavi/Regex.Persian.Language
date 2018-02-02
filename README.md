@@ -47,7 +47,7 @@ for example when string should only contains persian words and spaces just conca
 ### :white_square_button: Space
 
 
-This ranges include all kind of space, specially zero-width space that massively are using in Persian texts.
+This ranges include all kind of space, specially ZERO WIDTH NON-JOINER space that massively are using in Persian texts.
 
 
 ```
@@ -72,7 +72,7 @@ U+2008	   |	       |e2 80 88| PUNCTUATION SPACE
 U+2009	   |	       |e2 80 89| THIN SPACE
 U+200A	   |	       |e2 80 8a| HAIR SPACE
 U+200B	​   |	       |e2 80 8b| ZERO WIDTH SPACE
-U+200C	‌   |	       |e2 80 8c| ZERO WIDTH NON-JOINER
+U+200C	‌   |	       |e2 80 8c| ZERO WIDTH NON-JOINER  *
 U+200D	‍   |	       |e2 80 8d| ZERO WIDTH JOINER
 U+200E	‎   |	       |e2 80 8e| LEFT-TO-RIGHT MARK
 U+200F	‏   |           |e2 80 8f| RIGHT-TO-LEFT MARK
@@ -110,7 +110,7 @@ var space_codepoints ='\u0020\u2000-\u200F\u2028-\u202F';
 ---
 
 
-### :white_square_button: Persian alphabet (49 characters)
+### :white_square_button: Persian alphabet
 
 
 #### :small_orange_diamond: Allowed characters
@@ -308,7 +308,7 @@ var punctuation_marks_codepoints = '\u060C\u061B\u061F\u0640\u066A\u066B\u066C';
 ---
 
 
-### :white_square_button: Most used Arabic characters in Persian text
+### :white_square_button: Most used Arabic characters in Persian texts.
 
 
 
