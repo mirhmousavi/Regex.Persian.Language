@@ -47,7 +47,7 @@ for example when string should only contains persian words and spaces just conca
 ### :white_square_button: Space
 
 
-This ranges include all kind of space, specially ZERO WIDTH NON-JOINER space that massively are using in Persian texts.
+This ranges include all kind of space, specially ZERO WIDTH NON-JOINER and NARROW NO-BREAK SPACE that massively are using in Persian texts.
 
 
 ```
