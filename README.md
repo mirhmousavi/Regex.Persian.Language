@@ -47,8 +47,12 @@ for example when string should only contains persian words and spaces just conca
 ### :white_square_button: Space
 
 
-This ranges include all kind of space, specially ZERO WIDTH NON-JOINER (Shift+B in Persian keyboard layout in linux) and NARROW NO-BREAK SPACE (Shift+Space in Persian keyboard layout in linux) that known as half space and massively are using in Persian texts.
+This ranges include all kind of space, specially ZERO WIDTH NON-JOINER that use as half space and massively are using in Persian texts and NARROW NO-BREAK SPACE that is simmilar to previous character.
 
+#### Keyabord shortcuts
+ZERO WIDTH NON-JOINER = Shift + B in Persian keyboard layout in linux, Ctrl + Shift + 2 in Persian keyboard layout in windows
+
+NARROW NO-BREAK SPACE = Shift + Space in Persian keyboard layout in linux
 
 ```
 U+0020
