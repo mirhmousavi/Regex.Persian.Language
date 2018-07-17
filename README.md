@@ -54,6 +54,13 @@ ZERO WIDTH NON-JOINER = Shift + B in Persian keyboard layout in linux, Ctrl + Sh
 
 NARROW NO-BREAK SPACE = Shift + Space in Persian keyboard layout in linux
 
+
+#### :small_orange_diamond: Allowed characters
+
+
+
+
+
 ```
 U+0020
 U+2000-U+200F
