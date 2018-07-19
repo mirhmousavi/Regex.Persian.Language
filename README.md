@@ -1,5 +1,5 @@
 
-# 🇮🇷 🇮🇷 🇮🇷 Regex Persian Language 🇮🇷 🇮🇷 🇮🇷
+# Regex Persian Language
 ### Regex for Persian (Farsi) Characters
 ### عبارت منظم برای حروف فارسی
 
