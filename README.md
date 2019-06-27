@@ -14,7 +14,7 @@
 ### Introduction
 
 
-Because of historical matters, many Arabic characters get a way into Persian language and transformed it, In these years many efforts have been made by government and non-governmental organizations to revivification of authority of Persian language and this is one of them.
+Because of historical matters, many Arabic characters get a way into Persian language and transformed it, In these years many efforts have been made by governmental and non-governmental organizations to revivification of authority of Persian language and this is one of them.
 
 
 
@@ -24,7 +24,7 @@ Because of historical matters, many Arabic characters get a way into Persian lan
 * Persian alphabet consists of 33 characters (including hamzah) and 3 vowel marks.
 
 
-* The important part of this effort, is codepoints range, so you can create your own regex for validating, filtering and finding strings, just put the desired range in it.< br>
+* The important part of this effort, is codepoints range, so you can create your own regex for validating, filtering and finding strings, just put the desired range in it.
 for example when string should only contains persian words and spaces just concat space codepoints and persian alpha codepoints in the final Regex and so on.
 
 
