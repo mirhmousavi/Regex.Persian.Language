@@ -14,7 +14,7 @@
 ### Introduction
 
 
-Because of historical matters, many Arabic characters get a way into Persian language and transformed it, In these years many efforts have been made by governmental and non-governmental organizations to revivification of authority of Persian language and this is one of them.
+Because of historical matters, many Arabic characters get a way into Persian language and transformed it, In these years many efforts have been made by governmental and non-governmental organizations to revivification of authority of Persian language and this is one of them (really?!).
 
 
 
@@ -51,11 +51,11 @@ This ranges include all kind of space, specially ZERO WIDTH NON-JOINER that use 
 
 #### Keyabord shortcuts
 ZERO WIDTH NON-JOINER 
-- `Shift + B` in Persian keyboard layout in linux
-- `Ctrl + Shift + 2` in Persian keyboard layout in windows
+- `Shift + B` in Persian keyboard layout in Linux
+- `Ctrl + Shift + 2` in Persian keyboard layout in Windows
 
 NARROW NO-BREAK SPACE 
-- `Shift + Space` in Persian keyboard layout in linux
+- `Shift + Space` in Persian keyboard layout in Linux
 
 
 #### :small_orange_diamond: Allowed characters
@@ -353,11 +353,7 @@ U+06D5	   | ە	       | db 95 | ARABIC LETTER AE
 
 #### :small_orange_diamond: Implemention
 
-U+0629
-U+0643
-U+0649-U+064B
-U+064D
-U+06D5
+
 
 ```python
 # python
