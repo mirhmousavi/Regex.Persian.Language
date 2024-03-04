@@ -298,7 +298,7 @@ U+066B	   | ٫	       | d9 ab | ARABIC DECIMAL SEPARATOR
 U+066C	   | ٬	       | d9 ac | ARABIC THOUSANDS SEPARATOR
 
 
-#### :eight_pointed_black_star: for more common punctutation marks like `” | « | » | ?| ; | : | ...` <br> see [general punctuation page in unicode](https://unicode-table.com/en/blocks/general-punctuation/)
+#### :eight_pointed_black_star: for more common punctutation marks like `” | « | » | ?| ; | : | ...` <br> see [general punctuation page in unicode](https://symbl.cc/en/blocks/general-punctuation/)
 
 
 ```python
